@@ -21,7 +21,7 @@ export const API_URL = 'http://192.168.1.136:8080'
 `npx expo start`
 
 
-Configuration Backend (Java Spring Boot)
+Configuration du Backend avec Java Spring Boot
 
 1. Naviguer vers le répertoire Java Spring Boot :
 
