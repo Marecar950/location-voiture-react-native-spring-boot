@@ -3,6 +3,7 @@ import SearchVehiculesForm from './search_vehicules/SearchVehiculesForm';
 import Registration from './registration/Registration';
 import Login from './login/Login';
 import Dashboard from './voitures/Dashboard';
+import ReservationCalendar from './reservation/ReservationCalendar';
 import { useAuth } from './AuthContext';
 
 const CustomDrawerContent = (props) => {
@@ -36,6 +37,10 @@ const CustomDrawerContent = (props) => {
                     />
                     <DrawerItem label="Liste des clients" onPress={() => {
                         props.navigation.navigate('admin/ClientList');
+                    }}
+                    />
+                    <DrawerItem label="Calendrier des réservations" onPress={() => {
+                        props.navigation.navigate('reservation/ReservationCalendar');
                     }}
                     />
                     <DrawerItem label="Déconnexion" onPress={() => {

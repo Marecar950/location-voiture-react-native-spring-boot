@@ -11,6 +11,7 @@ import Reservation from '../reservation/Reservation';
 import UserReservations from '../reservation/UserReservations';
 import Account from '../account/Account.js';
 import Profile from '../account/Profil';
+import ReservationCalendar from '../reservation/ReservationCalendar';
 import ClientList from '../admin/ClientList';
 import DrawerNav from '../DrawerNav';
 
@@ -32,6 +33,7 @@ export default function MyStack() {
             <Stack.Screen options={{ title: 'Réservation' }} name="reservation/Reservation" component={Reservation} />
             <Stack.Screen options={{ title: 'Informations personnelles'}} name="account/Account" component={Account} />
             <Stack.Screen options={{ title: 'Modifier mon profil'}} name="account/Profil" component={Profile} />
+            <Stack.Screen options={{ title: 'Calendrier des réservations' }} name="reservation/ReservationCalendar" component={ReservationCalendar} />
             <Stack.Screen options={{ title: 'Liste des clients' }} name="admin/ClientList" component={ClientList} />
             <Stack.Screen options={{ title: 'Mes réservations'}} name="reservation/UserReservations" component={UserReservations} />
         </Stack.Navigator>  
