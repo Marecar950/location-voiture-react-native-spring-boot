@@ -47,6 +47,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/car/delete/{id}").permitAll()
                         .requestMatchers("/reservation/create").permitAll()
                         .requestMatchers("/reservations/user").permitAll()
+                        .requestMatchers("/reservations").permitAll()
                         .requestMatchers("/uploads/**").permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(

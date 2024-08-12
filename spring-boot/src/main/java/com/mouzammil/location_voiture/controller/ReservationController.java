@@ -118,4 +118,19 @@ public class ReservationController {
         }
     }
 
+    @GetMapping("/reservations")
+    public ResponseEntity<?> getReservations() {
+        try {
+            List<Reservation> reservations = reservationRepository.findAll();
+
+            if (reservations.isEmpty()) {
+                return ResponseEntity.status(404).body(new JsonResponse(null, "Aucune réservation"));
+            }
+            return ResponseEntity.ok(reservations);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest()
+                    .body("Erreur lors de la récupération des réservations : " + e.getMessage());
+        }
+    }
+
 }
